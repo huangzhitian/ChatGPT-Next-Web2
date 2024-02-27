@@ -3,9 +3,9 @@ import { useEffect, useRef, useMemo } from "react";
 import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
-import SettingsIcon from "../icons/settings.svg";
+import SettingsIcon from "../icons/st.svg"; 
 import GithubIcon from "../icons/qq.svg"; 
-import ChatGptIcon from "../icons/chatgpt.svg"; 
+import ChatGptIcon from "../icons/chatgpt.svg";  
 import AddIcon from "../icons/add.svg"; 
 import CloseIcon from "../icons/close.svg";
 import DeleteIcon from "../icons/delete.svg";
