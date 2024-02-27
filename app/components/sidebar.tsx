@@ -117,7 +117,7 @@ function useDragSideBar() {
   useEffect(() => {
     const barWidth = shouldNarrow
       ? NARROW_SIDEBAR_WIDTH
-      : limit(config.sidebarWidth ?? DEFAULT_SIDEBAR_WIDTH);
+      : limit(config.sidebarWidth ?? DEFAULT_SIDEBAR_WIDTH); 
     const sideBarWidth = isMobileScreen ? "100vw" : `${barWidth}px`;
     document.documentElement.style.setProperty("--sidebar-width", sideBarWidth);
   }, [config.sidebarWidth, isMobileScreen, shouldNarrow]);
@@ -145,7 +145,7 @@ export function SideBar(props: { className?: string }) {
 
   return (
     <div
-      className={`${styles.sidebar} ${props.className} ${
+      className={`${styles.sidebar} ${props.className} ${ 
         shouldNarrow && styles["narrow-sidebar"]
       }`}
       style={{
@@ -155,13 +155,13 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          NextChat
-        </div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          XiaoFeng 
+        </div> 
+        <div className={styles["sidebar-sub-title"]}> 
+          公益免费的ChatGPT 
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <ChatGptIcon /> 
         </div>
       </div>
 
@@ -174,7 +174,7 @@ export function SideBar(props: { className?: string }) {
             if (config.dontShowMaskSplashScreen !== true) {
               navigate(Path.NewChat, { state: { fromHome: true } });
             } else {
-              navigate(Path.Masks, { state: { fromHome: true } });
+              navigate(Path.Masks, { state: { fromHome: true } }); 
             }
           }}
           shadow
