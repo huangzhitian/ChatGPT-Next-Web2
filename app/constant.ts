@@ -52,7 +52,7 @@ export const MAX_SIDEBAR_WIDTH = 500;
 export const MIN_SIDEBAR_WIDTH = 230;
 export const NARROW_SIDEBAR_WIDTH = 100;
 
-export const ACCESS_CODE_PREFIX = "nk-"; 
+export const ACCESS_CODE_PREFIX = "nk-";  
 
 export const LAST_INPUT_KEY = "last-input";
 export const UNFINISHED_INPUT = (id: string) => "unfinished-input-" + id;
@@ -77,18 +77,18 @@ export enum ModelProvider {
 export const OpenaiPath = {
   ChatPath: "v1/chat/completions",
   UsagePath: "dashboard/billing/usage",
-  SubsPath: "dashboard/billing/subscription",
-  ListModelPath: "v1/models",
+  SubsPath: "dashboard/billing/subscription",  
+  ListModelPath: "v1/models", 
 };
 
-export const Azure = {
+export const Azure = { 
   ExampleEndpoint: "https://{resource-url}/openai/deployments/{deploy-id}",
 };
 
 export const Google = {
   ExampleEndpoint: "https://generativelanguage.googleapis.com/",
   ChatPath: "v1beta/models/gemini-pro:generateContent",
-  VisionChatPath: "v1beta/models/gemini-pro-vision:generateContent",
+  VisionChatPath: "v1beta/models/gemini-pro-vision:generateContent", 
 
   // /api/openai/v1/chat/completions
 };
@@ -96,7 +96,7 @@ export const Google = {
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
 export const DEFAULT_SYSTEM_TEMPLATE = `
 You are ChatGPT, a large language model trained by {{ServiceProvider}}.
-Knowledge cutoff: {{cutoff}}
+Knowledge cutoff: {{cutoff}} 
 Current model: {{model}}
 Current time: {{time}}
 Latex inline: $x^2$ 
@@ -119,21 +119,39 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 
 export const DEFAULT_MODELS = [
   {
-    name: "gpt-4",
+    name: "gpt-3.5-turbo", 
     available: true,
     provider: {
-      id: "openai",
+      id: "openai", 
       providerName: "OpenAI",
       providerType: "openai",
     },
   },
   {
-    name: "gpt-3.5-turbo", 
+    name: "gpt-3.5-turbo-1106",  
     available: true,
     provider: {
-      id: "openai",
+      id: "openai", 
       providerName: "OpenAI",
       providerType: "openai",
+    },
+  },
+  {
+    name: "gpt-3.5-turbo-16k-0613",  
+    available: true,
+    provider: {
+      id: "openai", 
+      providerName: "OpenAI",
+      providerType: "openai", 
+    },
+  },
+  {
+    name: "gpt-4",   
+    available: true,
+    provider: {
+      id: "openai",  
+      providerName: "OpenAI",
+      providerType: "openai", 
     },
   },
 ] as const;
