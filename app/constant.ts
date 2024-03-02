@@ -33,7 +33,7 @@ export enum SlotID {
 }
 
 export enum FileName {
-  Masks = "masks.json",
+  Masks = "masks.json", 
   Prompts = "prompts.json",
 }
 
@@ -48,16 +48,16 @@ export enum StoreKey {
 }
 
 export const DEFAULT_SIDEBAR_WIDTH = 300;
-export const MAX_SIDEBAR_WIDTH = 500;
+export const MAX_SIDEBAR_WIDTH = 500; 
 export const MIN_SIDEBAR_WIDTH = 230;
-export const NARROW_SIDEBAR_WIDTH = 100;
+export const NARROW_SIDEBAR_WIDTH = 100; 
 
 export const ACCESS_CODE_PREFIX = "nk-";  
 
-export const LAST_INPUT_KEY = "last-input";
+export const LAST_INPUT_KEY = "last-input"; 
 export const UNFINISHED_INPUT = (id: string) => "unfinished-input-" + id;
 
-export const STORAGE_KEY = "chatgpt-next-web";
+export const STORAGE_KEY = "chatgpt-next-web"; 
 
 export const REQUEST_TIMEOUT_MS = 60000;
 
@@ -90,7 +90,7 @@ export const Google = {
   ChatPath: "v1beta/models/gemini-pro:generateContent",
   VisionChatPath: "v1beta/models/gemini-pro-vision:generateContent", 
 
-  // /api/openai/v1/chat/completions
+  // /api/openai/v1/chat/completions 
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
@@ -121,6 +121,15 @@ export const DEFAULT_MODELS = [
   {
     name: "gpt-3.5-turbo", 
     available: true,
+    provider: { 
+      id: "openai", 
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "gpt-4",     
+    available: true, 
     provider: {
       id: "openai", 
       providerName: "OpenAI",
@@ -128,28 +137,10 @@ export const DEFAULT_MODELS = [
     },
   },
   {
-    name: "gpt-3.5-turbo-1106",  
+    name: "gpt-4-0125-preview",      
     available: true,
     provider: {
       id: "openai", 
-      providerName: "OpenAI",
-      providerType: "openai",
-    },
-  },
-  {
-    name: "gpt-3.5-turbo-16k-0613",  
-    available: true,
-    provider: {
-      id: "openai", 
-      providerName: "OpenAI",
-      providerType: "openai", 
-    },
-  },
-  {
-    name: "gpt-4",   
-    available: true,
-    provider: {
-      id: "openai",  
       providerName: "OpenAI",
       providerType: "openai", 
     },
