@@ -28,7 +28,7 @@ export enum ApiPath {
 }
 
 export enum SlotID {
-  AppBody = "app-body",
+  AppBody = "app-body", 
   CustomModel = "custom-model", 
 }
 
@@ -41,8 +41,8 @@ export enum StoreKey {
   Chat = "chat-next-web-store",
   Access = "access-control",
   Config = "app-config",
-  Mask = "mask-store",
-  Prompt = "prompt-store",
+  Mask = "mask-store", 
+  Prompt = "prompt-store", 
   Update = "chat-update",
   Sync = "sync",
 }
@@ -128,8 +128,17 @@ export const DEFAULT_MODELS = [
     },
   },
   {
-    name: "gpt-4-turbo",      
-    available: true, 
+    name: "gpt-4",        
+    available: true,   
+    provider: {
+      id: "openai", 
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "gpt-4-turbo",       
+    available: true,  
     provider: {
       id: "openai", 
       providerName: "OpenAI",
@@ -144,7 +153,7 @@ export const DEFAULT_MODELS = [
       providerName: "OpenAI",
       providerType: "openai", 
     },
-  }
+  },
 ] as const;
 
 export const CHAT_PAGE_SIZE = 15;
