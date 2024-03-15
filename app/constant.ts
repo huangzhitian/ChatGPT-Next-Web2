@@ -29,7 +29,7 @@ export enum ApiPath {
 
 export enum SlotID {
   AppBody = "app-body",
-  CustomModel = "custom-model",
+  CustomModel = "custom-model", 
 }
 
 export enum FileName {
@@ -75,7 +75,7 @@ export enum ModelProvider {
 }
 
 export const OpenaiPath = {
-  ChatPath: "v1/chat/completions",
+  ChatPath: "v1/chat/completions", 
   UsagePath: "dashboard/billing/usage",
   SubsPath: "dashboard/billing/subscription",  
   ListModelPath: "v1/models", 
@@ -144,7 +144,7 @@ export const DEFAULT_MODELS = [
       providerName: "OpenAI",
       providerType: "openai", 
     },
-  },
+  }
 ] as const;
 
 export const CHAT_PAGE_SIZE = 15;
