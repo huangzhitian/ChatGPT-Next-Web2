@@ -54,7 +54,7 @@ export const NARROW_SIDEBAR_WIDTH = 100; 
 
 export const ACCESS_CODE_PREFIX = "nk-";  
 
-export const LAST_INPUT_KEY = "last-input"; 
+export const LAST_INPUT_KEY = "last-input";  
 export const UNFINISHED_INPUT = (id: string) => "unfinished-input-" + id;
 
 export const STORAGE_KEY = "chatgpt-next-web"; 
@@ -95,7 +95,7 @@ export const Google = {
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
 export const DEFAULT_SYSTEM_TEMPLATE = `
-You are ChatGPT, a large language model trained by {{ServiceProvider}}.
+You are ChatGPT, a large language model trained by {{ServiceProvider}}. 
 Knowledge cutoff: {{cutoff}} 
 Current model: {{model}}
 Current time: {{time}}
@@ -128,7 +128,7 @@ export const DEFAULT_MODELS = [
     },
   },
   {
-    name: "gpt-4",     
+    name: "gpt-4-turbo",      
     available: true, 
     provider: {
       id: "openai", 
@@ -137,7 +137,7 @@ export const DEFAULT_MODELS = [
     },
   },
   {
-    name: "gpt-4-0125-preview",      
+    name: "gpt-4-vision-preview",         
     available: true,
     provider: {
       id: "openai", 
